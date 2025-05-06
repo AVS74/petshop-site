@@ -1,0 +1,34 @@
+/* ======== ОБНУЛЕНИЕ СТИЛЕЙ ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======== ОСНОВНОЙ СТИЛЬ СТРАНИЦЫ ======== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd; /* фон можно заменить */
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ======== ШАПКА САЙТА ======== */
+header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Добавим медиазапрос */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .product-card {
+    width: 100%;
+  }
+}
