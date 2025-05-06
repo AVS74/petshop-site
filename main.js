@@ -1,9 +1,11 @@
-// При клике на кнопку "В корзину" выводим сообщение
+// ======= СКРИПТ ДОБАВЛЕНИЯ В КОРЗИНУ =======
+
 document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll("button");
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      alert("Товар добавлен в корзину 🛒");
-    });
-  });
-});
+  const buttons = document.querySelectorAll(".product-card button")
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      alert("Товар добавлен в корзину 🛒")
+    })
+  })
+})

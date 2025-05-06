@@ -1,45 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Чемпион – магазин кормов</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Чемпион – Зоомагазин</title>
+
+  <!-- Подключение внешнего CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Подключение скрипта -->
   <script defer src="js/main.js"></script>
 </head>
 <body>
-  <!-- Шапка -->
+
+  <!-- ШАПКА САЙТА -->
   <header>
-    <h1>Чемпион</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Каталог</a></li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </nav>
+    <div class="container header-inner">
+      <h1 class="logo">Чемпион</h1>
+      <nav>
+        <ul class="nav">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Баннер -->
+  <!-- БАННЕР (ГЕРОЙ-СЕКЦИЯ) -->
   <section class="hero">
-    <h2>Лучшие корма для любимцев</h2>
-    <p>Быстрая доставка и забота о каждом хвостике 🐶🐱</p>
-    <button>Перейти в каталог</button>
-  </section>
-
-  <!-- Витрина товаров -->
-  <section class="products">
-    <h3>Популярные товары</h3>
-    <div class="product-card">
-      <img src="images/test.jpg" alt="Корм">
-      <h4>Grandorf для собак</h4>
-      <p>Беззерновой, 3 кг</p>
-      <button>В корзину</button>
+    <div class="container">
+      <h2>Корма, которые любят питомцы</h2>
+      <p>С заботой о хвостиках – от лучших брендов</p>
+      <button>Смотреть каталог</button>
     </div>
-    <!-- ещё карточки -->
   </section>
 
-  <!-- Подвал -->
+  <!-- ВИТРИНА ТОВАРОВ -->
+  <section class="products">
+    <div class="container">
+      <h3>Популярные товары</h3>
+      <div class="product-grid">
+        <!-- Карточка товара -->
+        <div class="product-card">
+          <img src="images/test.jpg" alt="Корм Grandorf" />
+          <h4>Grandorf для собак</h4>
+          <p>Беззерновой, 3 кг</p>
+          <button>В корзину</button>
+        </div>
+        <!-- Можно добавить больше карточек -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ПОДВАЛ -->
   <footer>
-    <p>&copy; 2025 Чемпион – Всё для животных</p>
+    <div class="container">
+      <p>&copy; 2025 Чемпион – Всё для животных</p>
+    </div>
   </footer>
+
 </body>
+</html>
