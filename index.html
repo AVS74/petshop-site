@@ -3,80 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <title>Чемпион – Зоомагазин</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <title>Зоомагазин «ZooPals»</title>
 
-  <!-- Подключение внешнего CSS -->
+  <!-- Подключаем стили -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- SEO -->
-<meta name="description" content="Чемпион – современный зоомагазин: корма, доставка и забота о питомцах.">
-<meta name="keywords" content="зоомагазин, корма для животных, собаки, кошки, Grandorf, Premier">
-<meta name="author" content="AVS74">
-
-<!-- Open Graph для соцсетей 
- Измени og:image, когда загрузишь красивую картинку (логотип, баннер и т.д.)-->
-<meta property="og:title" content="Чемпион – зоомагазин" />
-<meta property="og:description" content="Лучшие корма и товары для животных с доставкой по России." />
-<meta property="og:image" content="https://avs74.github.io/petshop-site/images/test.jpg" />
-<meta property="og:url" content="https://avs74.github.io/petshop-site/" />
-<meta name="twitter:card" content="summary_large_image" />
-
-
-  <!-- Подключение скрипта -->
-  <script defer src="js/main.js"></script>
 </head>
 <body>
 
-  <!-- ШАПКА САЙТА -->
-  <header>
-    <div class="container header-inner">
-      <h1 class="logo">Чемпион</h1>
-      <nav>
-        <ul class="nav">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
+  <!-- ======== ШАПКА ======== -->
+  <header class="site-header">
+    <!-- Верхний информационный бар -->
+    <div class="top-bar">
+      <div class="top-bar__logo">ZooPals</div>
+      <div class="top-bar__info">
+        <span class="phone">+7 (999) 123-45-67</span>
+        <span class="address">г. Москва, ул. Пушкина, д. 10</span>
+        <span class="hours">Пн–Пт: 9:00–20:00, Сб–Вс: 10:00–18:00</span>
+        <!-- Иконки Telegram и чат-бот -->
+        <a href="#" class="icon telegram" title="Telegram"></a>
+        <a href="#" class="icon bot" title="Бот для заказов"></a>
+      </div>
     </div>
   </header>
 
-  <!-- БАННЕР (ГЕРОЙ-СЕКЦИЯ) -->
-  <section class="hero">
-    <div class="container">
-      <h2>Корма, которые любят питомцы</h2>
-      <p>С заботой о хвостиках – от лучших брендов</p>
-      <button>Смотреть каталог</button>
+  <!-- ======== БАННЕР (КАРУСЕЛЬ) ======== -->
+   <!-- Важно: каждый слайд — это блок с классом .banner__slide внутри контейнера .banner__slides.-->
+  <section class="banner">
+  <button class="banner__nav prev">←</button>
+
+  <!-- Обёртка для всех слайдов -->
+  <div class="banner__slides">
+    <div class="banner__slide">
+      <div class="banner__text">Скидка 30% на корма</div>
+    </div>
+    <div class="banner__slide">
+      <div class="banner__text">Новинки: игрушки для котят</div>
+    </div>
+    <div class="banner__slide">
+      <div class="banner__text">Акция: аксессуары со скидкой</div>
+    </div>
+    <!-- Добавляйте сколько нужно слайдов -->
+  </div>
+
+  <button class="banner__nav next">→</button>
+</section>
+
+
+  <!-- ======== О НАШЕМ ЗООМАГАЗИНЕ ======== -->
+  <section class="about">
+    <h2>О нашем зоомагазине</h2>
+    <div class="about__text">
+      <p>Добро пожаловать в «ZooPals» — ваш надёжный партнёр в заботе о домашних питомцах! Наш магазин работает с 2010 года и специализируется на продаже качественных товаров для животных.</p>
+      <p>Мы предлагаем широкий ассортимент кормов премиум-класса, аксессуаров, игрушек и средств по уходу за животными. Наши консультанты всегда готовы помочь выбрать оптимальный товар для вашего питомца.</p>
+      <p>В нашем зоомагазине вы найдёте товары для кошек, собак, птиц, грызунов, рыб и рептилий. Мы сотрудничаем только с проверенными поставщиками, чтобы гарантировать качество и безопасность продукции.</p>
+      <p>Приходите к нам в магазин или заказывайте товары через наш телеграм-бот. Доставка осуществляется по всему городу!</p>
     </div>
   </section>
 
-  <!-- ВИТРИНА ТОВАРОВ -->
-  <section class="products">
-    <div class="container">
-      <h3>Популярные товары</h3>
-      <div class="product-grid">
-        <!-- Карточка товара -->
-        <div class="product-card">
-          <img src="images/test.jpg" alt="Корм Grandorf" />
-          <h4>Grandorf для собак</h4>
-          <p>Беззерновой, 3 кг</p>
-          <button>В корзину</button>
-        </div>
-        <!-- Можно добавить больше карточек -->
+  <!-- карусель брендов
+  Важно: логотипы должны быть в папке images/, желательно в формате PNG или SVG с прозрачным фоном.  -->
+  <section class="brand-carousel">
+  <h2 class="carousel-title">Наши бренды</h2>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="carousel-slide"><img src="images/logo-grandorf.png" alt="Grandorf"></div>
+      <div class="carousel-slide"><img src="images/logo-premier.png" alt="Premier"></div>
+      <div class="carousel-slide"><img src="images/logo-royalcanin.png" alt="Royal Canin"></div>
+      <div class="carousel-slide"><img src="images/logo-hills.png" alt="Hill's"></div>
+      <div class="carousel-slide"><img src="images/logo-purina.png" alt="Purina"></div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ======== ПОДВАЛ ======== -->
+  <footer class="site-footer">
+    <div class="footer__columns">
+
+      <!-- Колонка «Как нас найти» -->
+      <div class="footer__col">
+        <h3>Как нас найти</h3>
+        <ul>
+          <li>г. Москва, ул. Пушкина, д. 10</li>
+          <li>+7 (999) 123-45-67</li>
+          <li>Пн–Пт: 9:00–20:00, Сб–Вс: 10:00–18:00</li>
+        </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- ПОДВАЛ -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Чемпион – Всё для животных</p>
+      <!-- Колонка «Схема проезда» -->
+      <div class="footer__col">
+        <h3>Схема проезда</h3>
+        <div class="map-placeholder">
+          <!-- Здесь можно подключить iframe с Google Maps или интерактивную карту -->
+          <p>Интерактивная карта<br>Нажмите, чтобы открыть навигатор</p>
+        </div>
+      </div>
+
+      <!-- Колонка «Наши контакты» -->
+      <div class="footer__col">
+        <h3>Наши контакты</h3>
+        <ul>
+          <li>Telegram канал</li>
+          <li>Бот для заказов</li>
+          <li>Группа ВКонтакте</li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- Нижняя строка -->
+    <div class="footer__bottom">
+      <p>От метро "Пушкинская" автобусом №123 до остановки "Зоомагазин"</p>
+      <span class="made-with">Made with Ideaship</span>
     </div>
   </footer>
+  <!--ПОДКЛЮЧАЕМ СКРИПТЫ -->
+<script src="js/banner.js"></script>
+<script src="js/logos-carousel.js"></script>
+
 
 </body>
 </html>
